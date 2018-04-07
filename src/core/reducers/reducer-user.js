@@ -1,7 +1,7 @@
 import constants from 'core/types';
 
 const initialState = {
-  user: null
+  loggedInUser: {}
 };
 
 export function userReducer (state = initialState, action) {
@@ -10,11 +10,11 @@ export function userReducer (state = initialState, action) {
 
   case constants.USER_LOGGED_IN :
     return Object.assign({}, state, {
-      data: action.payload
+      loggedInUser: action.payload
     });
 
   case constants.USER_LOGGED_OUT :
-    return state;
+    return initialState;
 
   default:
     return state;

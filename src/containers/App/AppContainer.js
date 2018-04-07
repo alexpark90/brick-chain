@@ -18,7 +18,7 @@ import './styles/app.scss'
 import * as uiActionCreators from 'core/actions/actions-ui'
 
 /* application containers & components */
-import { HeaderContainer, LeftNavBarContainer, HomeViewContainer, LoginContainer } from 'containers'
+import { HeaderContainer, LeftNavBarContainer, HomeViewContainer } from 'containers'
 import { Modal } from 'components'
 
 injectTapEventPlugin()
@@ -37,7 +37,6 @@ class AppContainer extends Component {
           <HashRouter>
             <div>
               <HeaderContainer />
-              <LoginContainer />
               <div className='container'>
                 <Switch>
                   <Route path='/home' component={HomeViewContainer} />

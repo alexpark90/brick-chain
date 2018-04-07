@@ -26,7 +26,7 @@ const LoginButton = ({ onLoginUserClick }) => {
       label="Login With UPort"
       primary={true}
       style={styles.button}
-      icon={<FontIcon className="muidocs-icon-custom-github" />}
+      icon={<FontIcon src={uPortLogo} />}
       onClick={onLoginUserClick}
     />
   )

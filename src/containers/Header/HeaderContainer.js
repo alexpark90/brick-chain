@@ -15,11 +15,6 @@ import LoginContainer from '../Login/LoginContainer';
 class HeaderContainer extends Component {
   constructor(props) {
     super(props);
-
-    console.log('props = ', props);
-    this.state = {
-      name : props.ui.user.name
-    }
   }
 
   handleToggle =() => {
@@ -31,7 +26,7 @@ class HeaderContainer extends Component {
       <div className={styles}>
         <header>
           <MuiAppBar
-            title={this.props.ui.user.name}
+            title={this.props.user.loggedInUser.name}
             onLeftIconButtonTouchTap={this.handleToggle}
             iconElementRight={<LoginContainer />}
           />
@@ -43,7 +38,8 @@ class HeaderContainer extends Component {
 
 function mapStateToProps(state) {
   return {
-    ui: state.ui
+    ui: state.ui,
+    user: state.user
   };
 }
 
