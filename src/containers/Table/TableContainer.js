@@ -29,43 +29,50 @@ const tableData = [
     vaccineName : 'Dummy Vaccine Name',
     name: 'John Smith',
     date : "07/04/18",
-    status: 'Employed',
+    dateAdministered: '31/04/12',
+    dateVaccine: '01/01/13',
   },
   {
     vaccineId : '2',
     vaccineName : 'Dummy Vaccine Name',
     name: 'Randal White',
-    status: 'Unemployed',
+    dateAdministered: '31/04/12',
+    dateVaccine: '01/01/13',
   },
   {
     vaccineId : '3',
     vaccineName : 'Dummy Vaccine Name',
     name: 'Stephanie Sanders',
-    status: 'Employed',
+    dateAdministered: '31/04/12',
+    dateVaccine: '01/01/13',
   },
   {
     vaccineId : '4',
     vaccineName : 'Dummy Vaccine Name',
     name: 'Steve Brown',
-    status: 'Employed',
+    dateAdministered: '31/04/12',
+    dateVaccine: '01/01/13',
   },
   {
     vaccineId : '5',
     vaccineName : 'Dummy Vaccine Name',
     name: 'Joyce Whitten',
-    status: 'Employed',
+    dateAdministered: '31/04/12',
+    dateVaccine: '01/01/13',
   },
   {
     vaccineId : '6',
     vaccineName : 'Dummy Vaccine Name',
     name: 'Samuel Roberts',
-    status: 'Employed',
+    dateAdministered: '31/04/12',
+    dateVaccine: '01/01/13',
   },
   {
     vaccineId : '7',
     vaccineName : 'Dummy Vaccine Name',
     name: 'Adam Moore',
-    status: 'Employed',
+    dateAdministered: '31/04/12',
+    dateVaccine: '01/01/13',
   },
 ];
 
@@ -120,7 +127,8 @@ handleChange = (event) => {
                 <TableHeaderColumn tooltip="The vaccineID">Vaccine ID</TableHeaderColumn>
                 <TableHeaderColumn tooltip="The vaccineName">Vaccine Name</TableHeaderColumn>
                 <TableHeaderColumn tooltip="The Name">Name</TableHeaderColumn>
-                <TableHeaderColumn tooltip="The Status">Status</TableHeaderColumn>
+                <TableHeaderColumn tooltip="The Vaccine Administration">Vaccine Administration</TableHeaderColumn>
+                <TableHeaderColumn tooltip="The Vaccine Expiration">Vaccine Expiration</TableHeaderColumn>
               </TableRow>
             </TableHeader>
             <TableBody
@@ -135,7 +143,8 @@ handleChange = (event) => {
                   <TableRowColumn>{row.vaccineId}</TableRowColumn>
                   <TableRowColumn>{row.vaccineName}</TableRowColumn>
                   <TableRowColumn>{row.name}</TableRowColumn>
-                  <TableRowColumn>{row.status}</TableRowColumn>
+                  <TableRowColumn>{row.dateAdministered}</TableRowColumn>
+                  <TableRowColumn>{row.dateVaccine}</TableRowColumn>
                 </TableRow>
                 ))}
             </TableBody>
