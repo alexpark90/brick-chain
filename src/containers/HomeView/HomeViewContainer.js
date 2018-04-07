@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { withRouter } from 'react-router-dom'
-import { VacHistoryContainer } from 'containers'
+import { VacHistoryContainer, VaccineFormContainer } from 'containers'
 /* component styles */
 import { styles } from './styles.scss'
 
@@ -23,6 +23,7 @@ class HomeViewContainer extends Component {
       <div className={styles}>
         <div id='home-view'>
           <button onClick={this.onLoginClick}>Login!</button>
+          <VaccineFormContainer />
           <VacHistoryContainer />
         </div>
       </div>
