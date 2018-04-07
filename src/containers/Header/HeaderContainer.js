@@ -10,7 +10,7 @@ import * as uiActionCreators  from 'core/actions/actions-ui';
 
 /* component styles */
 import { styles } from './styles.scss';
-import LoginButton from './LoginButton';
+import LoginContainer from '../Login/LoginContainer';
 
 class HeaderContainer extends Component {
   constructor(props) {
@@ -22,9 +22,9 @@ class HeaderContainer extends Component {
     }
   }
 
-  handleToggle=() => {
+  handleToggle =() => {
     this.props.actions.ui.openLeftNav();
-  }
+  };
 
   render() {
     return (
@@ -33,7 +33,7 @@ class HeaderContainer extends Component {
           <MuiAppBar
             title={this.props.ui.user.name}
             onLeftIconButtonTouchTap={this.handleToggle}
-            iconElementRight={<LoginButton />}
+            iconElementRight={<LoginContainer />}
           />
         </header>
       </div>
