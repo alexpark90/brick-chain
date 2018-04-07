@@ -4,11 +4,15 @@ import { bindActionCreators } from 'redux'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import muiTheme from './styles/theme/mui-theme'
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import {fade} from 'material-ui/utils/colorManipulator'
 import { HashRouter,
          Route,
          Redirect,
          Switch } from 'react-router-dom'
-
+import {
+  green700, orange700, green900, orange900
+} from 'material-ui/styles/colors'
 /*
  * Import global styles into entire app
  */
@@ -23,6 +27,20 @@ import { Modal } from 'components'
 
 injectTapEventPlugin()
 
+const theme = getMuiTheme({
+  palette: {
+    primary1Color: green700,
+    primary2Color: green900,
+    accent1Color: orange700,
+    accent2Color: orange900,
+    pickerHeaderColor: green700,
+    clockCircleColor: fade(green700, 0.07)
+  }
+  // status: {
+  //   danger: 'orange',
+  // },
+})
+
 class AppContainer extends Component {
   constructor (props) {
     super(props)
@@ -32,7 +50,7 @@ class AppContainer extends Component {
     const { ui, actions } = this.props
 
     return (
-      <MuiThemeProvider muiTheme={muiTheme}>
+      <MuiThemeProvider muiTheme={theme}>
         <div>
           <HashRouter>
             <div>

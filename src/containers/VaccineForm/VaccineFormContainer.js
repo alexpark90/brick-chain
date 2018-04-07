@@ -86,10 +86,10 @@ class VaccineFormContainer extends Component {
               floatingLabelText="Date Administered"
             />
             <DatePicker 
-              name='nextDate'
-              hintText="Next Vaccination Date" 
+              name='validUntil'
+              hintText="Valid Until" 
               openToYearSelection={true} 
-              floatingLabelText="Next Vaccination Date"
+              floatingLabelText="Valid Until"
             />
             <RaisedButton
               style={margin32}
