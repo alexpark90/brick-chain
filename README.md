@@ -3,9 +3,11 @@
 ## Useful commands
 
 - create new branch `git checkout -b 'BRANCH_NAME'`
+- push your new branch to remote `git push -U BRANCH_NAME origin`
+- subsequent pushes are just `git push`
+- switch to existing branch `git checkout BRANCH_NAME`
 - get the latest changes from remote github `git pull`
 - commit your change `git add .` and `git commit -m 'write your message'`
-- push your change to remote github `git push`
 - install all node_moduels `npm install` or `npm update`
 
 
