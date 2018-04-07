@@ -81,9 +81,12 @@
     "react-dom": "^15.4.1",
     "react-redux": "^4.4.5",
     "react-router-dom": "^4.1.1",
+    "react-router-redux": "^4.0.7",
     "react-tap-event-plugin": "^2.0.1",
     "redux": "^3.1.4",
+    "redux-auth-wrapper": "^1.0.0",
     "redux-thunk": "^2.0.1",
-    "web3": "^1.0.0-beta.18"
+    "uport-connect": "^0.7.0",
+    "web3": "^1.0.0-beta2"
   }
 }

@@ -14,15 +14,10 @@ class HomeViewContainer extends Component {
     super(props)
   }
 
-  onLoginClick () {
-    // this.props.actions.ui.login()
-  }
-
   render () {
     return (
       <div className={styles}>
         <div id='home-view'>
-          <button onClick={this.onLoginClick}>Login!</button>
           <VaccineFormContainer />
           <VacHistoryContainer />
         </div>

@@ -3,35 +3,33 @@ import { connect }            from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { withRouter }         from 'react-router-dom';
 // import { appConfig }          from 'core/configs/config-app';
-import { AppBar }                from 'components';
+import { AppBar as MuiAppBar } from 'material-ui';
 
 /* actions */
 import * as uiActionCreators  from 'core/actions/actions-ui';
 
 /* component styles */
 import { styles } from './styles.scss';
+import LoginContainer from '../Login/LoginContainer';
 
 class HeaderContainer extends Component {
   constructor(props) {
     super(props);
-
-    console.log('props = ', props);
-    this.state = {
-      name : props.ui.user.name
-    }
   }
 
-  handleToggle=() => {
+  handleToggle =() => {
     this.props.actions.ui.openLeftNav();
-  }
+  };
 
   render() {
     return (
       <div className={styles}>
         <header>
-          <AppBar
-            title={this.props.ui.user.name}
-            onLeftIconButtonTouchTap={this.handleToggle} />
+          <MuiAppBar
+            title={this.props.user.loggedInUser.name}
+            onLeftIconButtonTouchTap={this.handleToggle}
+            iconElementRight={<LoginContainer />}
+          />
         </header>
       </div>
     );
@@ -40,7 +38,8 @@ class HeaderContainer extends Component {
 
 function mapStateToProps(state) {
   return {
-    ui: state.ui
+    ui: state.ui,
+    user: state.user
   };
 }
 
