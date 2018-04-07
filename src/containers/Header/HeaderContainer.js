@@ -2,8 +2,8 @@ import React, { Component }   from 'react';
 import { connect }            from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { withRouter }         from 'react-router-dom';
-import { appConfig }          from 'core/configs/config-app';
-import AppBar                 from 'components/AppBar';
+// import { appConfig }          from 'core/configs/config-app';
+import { AppBar }                from 'components';
 
 /* actions */
 import * as uiActionCreators  from 'core/actions/actions-ui';
@@ -11,7 +11,7 @@ import * as uiActionCreators  from 'core/actions/actions-ui';
 /* component styles */
 import { styles } from './styles.scss';
 
-class Header extends Component {
+class HeaderContainer extends Component {
   constructor(props) {
     super(props);
 
@@ -52,4 +52,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HeaderContainer));

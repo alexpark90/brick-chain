@@ -10,13 +10,13 @@ import { styles } from './styles.scss';
 /* actions */
 import * as uiActionCreators from 'core/actions/actions-ui';
 
-class LeftNavBar extends Component {
+class LeftNavBarContainer extends Component {
   constructor(props) {
     super(props);
     console.log('on leftNavBar', props);
   }
 
-  closeNav=() => {
+  closeNav = () => {
     this.props.actions.ui.closeLeftNav();
   }
 
@@ -53,4 +53,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LeftNavBar));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LeftNavBarContainer));
