@@ -1,3 +1,14 @@
+# Brick Chain Team Repo
+
+## Useful commands
+
+- create new branch `git checkout -b 'BRANCH_NAME'`
+- get the latest changes from remote github `git pull`
+- commit your change `git add .` and `git commit -m 'write your message'`
+- push your change to remote github `git push`
+- install all node_moduels `npm install` or `npm update`
+
+
 # React, Redux, Truffle, and Material-UI for bootstrapping a Dapp
 
 In addition to Webpack and React, this box adds: React-Router, Redux and Material-UI for easy skinning of a Dapp.
