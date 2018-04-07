@@ -8,20 +8,34 @@ import { styles } from './styles.scss'
 
 /* actions */
 import * as uiActionCreators from 'core/actions/actions-ui'
+import {Tab, Tabs} from 'material-ui/Tabs/index';
 
 class HomeViewContainer extends Component {
   constructor (props) {
-    super(props)
+    super(props);
+    this.state = {
+      value: 'createVacTab'
+    };
   }
+
+  handleChange = (value) => {
+    this.setState({
+      value: value
+    });
+  };
 
   render () {
     return (
-      <div className={styles}>
-        <div id='home-view'>
+      <Tabs
+        value={this.state.value}
+        onChange={this.handleChange} >
+        <Tab label="Create Vaccine Record" value="createVacTab">
           <VaccineFormContainer />
+        </Tab>
+        <Tab label="View Vaccine History" value="viewVacHistoryTab">
           <VacHistoryContainer />
-        </div>
-      </div>
+        </Tab>
+      </Tabs>
     )
   }
 }
