@@ -6,6 +6,9 @@ import DatePicker from 'material-ui/DatePicker';
 import Formsy from 'formsy-react'
 import Paper from 'material-ui/Paper'
 import { FormsyText } from 'formsy-material-ui/lib'
+import MenuItem from 'material-ui/MenuItem';
+import { vaccineList } from 'assets/mock_data/vaccineList'
+import { patientList } from 'assets/mock_data/patientList'
 
 const styles = {
   paperStyle: {
@@ -21,6 +24,8 @@ const styles = {
   }
 }
 
+
+
 class VaccineFormContainer extends Component {
   // static propTypes = {
   //   : PropTypes.func
@@ -29,8 +34,9 @@ class VaccineFormContainer extends Component {
     super(props)
     this.state = {
       submitted: false,
-      canSubmit: false
-
+      canSubmit: false,
+      vaccine: '',
+      patient: '',
     }
   }
   handleSubmit = () => {
@@ -45,12 +51,33 @@ class VaccineFormContainer extends Component {
     this.setState({ canSubmit: false })
   }
 
+  handleVaccineChange = (event, index, value) => {
+    this.setState({ vaccine: value });
+    console.log(`Selected Vaccine: ${value}`);
+  }
+
+  handlePatientChange = (event, index, value) => {
+    this.setState({ patient: value });
+    console.log(`Selected Patient: ${value}`);
+  }
+  
   notifyFormError (data) {
     console.error('Form error:', data)
   }
 
   render () {
     let { paperStyle, margin32 } = styles
+    const vaccines = [];
+    const patients = []
+    for (let i = 0; i < vaccineList.length; i++ ) {
+      vaccines.push(<MenuItem value={vaccineList[i]} key={vaccineList[i].IntId} primaryText={vaccineList[i].Name} />);
+    }
+
+    for (let i = 0; i < patientList.length; i++ ) {
+      patients.push(<MenuItem value={patientList[i]} key={patientList[i].ID} primaryText={`${patientList[i]['First Name']} ${patientList[i]['Last Name']}`} />);
+    }
+    
+
     return (
       <div>
         {this.state.submitted ? <div>Submitted!</div> : null}
@@ -60,20 +87,31 @@ class VaccineFormContainer extends Component {
             onInvalid={this.disableButton}
             onValidSubmit={this.handleSubmit}
             onInvalidSubmit={this.notifyFormError}>
-            <FormsyText
-              name='account'
+            <SelectField
+              name='patient'
               required
-              hintText="patient's account address"
-              floatingLabelText="Patient's account"
-            />
-            <FormsyText
+              hintText='Patient'
+              floatingLabelText="Patient"
+              value={this.state.patient}
+              onChange={this.handlePatientChange}
+              maxHeight={200}
+            >
+               {patients}
+            </SelectField>
+            <SelectField
               name='vaccine'
               required
               hintText='vaccine id'
-              floatingLabelText='Vaccine Id' />
+              floatingLabelText="Vaccine"
+              value={this.state.vaccine}
+              onChange={this.handleVaccineChange}
+              maxHeight={200}
+            >
+               {vaccines}
+            </SelectField>
             <FormsyText
               name='dosage'
-              type="number"
+              value={this.state.vaccine.Dosage}
               required
               hintText="Administered Dosage of the Vaccine"
               floatingLabelText="Dosage"
@@ -85,12 +123,20 @@ class VaccineFormContainer extends Component {
               floatingLabelFixed={true}
               floatingLabelText="Date Administered"
             />
-            <DatePicker 
+            <FormsyText
+              name='dosage'
+              value={this.state.vaccine['Valid Until']}
+              required
+              hintText="Administered Dosage of the Vaccine"
+              floatingLabelText="Dosage"
+            />
+            {/* <DatePicker 
               name='validUntil'
               hintText="Valid Until" 
+              defaultDate={new Date(this.state.vaccine['Valid Until']) }
               openToYearSelection={true} 
               floatingLabelText="Valid Until"
-            />
+            /> */}
             <RaisedButton
               style={margin32}
               primary={true}
