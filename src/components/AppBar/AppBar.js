@@ -7,7 +7,9 @@ import { styles } from './styles.scss';
 export default function AppBar(props) {
   return (
     <div className={styles}>
-      <MuiAppBar {...props} className="app-bar" />
+      <MuiAppBar {...props} className="app-bar"
+                 iconElementRight={<FlatButton label="Save" />}
+      />
     </div>
   );
 }

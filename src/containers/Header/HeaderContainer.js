@@ -3,13 +3,14 @@ import { connect }            from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { withRouter }         from 'react-router-dom';
 // import { appConfig }          from 'core/configs/config-app';
-import { AppBar }                from 'components';
+import { AppBar as MuiAppBar } from 'material-ui';
 
 /* actions */
 import * as uiActionCreators  from 'core/actions/actions-ui';
 
 /* component styles */
 import { styles } from './styles.scss';
+import LoginButton from './LoginButton';
 
 class HeaderContainer extends Component {
   constructor(props) {
@@ -29,9 +30,11 @@ class HeaderContainer extends Component {
     return (
       <div className={styles}>
         <header>
-          <AppBar
+          <MuiAppBar
             title={this.props.ui.user.name}
-            onLeftIconButtonTouchTap={this.handleToggle} />
+            onLeftIconButtonTouchTap={this.handleToggle}
+            iconElementRight={<LoginButton />}
+          />
         </header>
       </div>
     );
