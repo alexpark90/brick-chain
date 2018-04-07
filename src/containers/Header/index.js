@@ -30,15 +30,11 @@ class Header extends Component {
       <div className={styles}>
         <header>
           <AppBar
-            title={appConfig.name}
+            title={this.props.ui.user.name}
             onLeftIconButtonTouchTap={this.handleToggle} />
-            <div>
-              {this.props.ui.user.name}
-            </div>
         </header>
       </div>
     );
-
   }
 }
 
