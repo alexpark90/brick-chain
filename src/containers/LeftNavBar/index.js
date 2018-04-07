@@ -3,7 +3,6 @@ import { connect }            from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { withRouter }         from 'react-router-dom';
 import { Drawer, AppBar }     from 'material-ui';
-import { appConfig }          from 'core/configs/config-app';
 
 /* component styles */
 import { styles } from './styles.scss';
