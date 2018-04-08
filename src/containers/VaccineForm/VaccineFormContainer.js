@@ -9,6 +9,7 @@ import { FormsyText } from 'formsy-material-ui/lib'
 import MenuItem from 'material-ui/MenuItem';
 import { vaccineList } from 'assets/mock_data/vaccineList'
 import { patientList } from 'assets/mock_data/patientList'
+import { web3 } from 'core/utils/connectors'
 
 const styles = {
   paperStyle: {
@@ -38,8 +39,11 @@ class VaccineFormContainer extends Component {
       vaccine: '',
       patient: '',
     }
+
+
   }
   handleSubmit = () => {
+    web3
     this.setState({ submitted: true })
   }
 
