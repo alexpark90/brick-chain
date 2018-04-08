@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="460de04e-e235-42f8-acda-dff5652ccf45" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/utils/wrappers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/utils/wrappers.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,47 +13,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AppContainer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/App/AppContainer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="truffle.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/truffle.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="VaccineERC721.sol" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contracts/VaccineERC721.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="340">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VaccineERC721.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build/contracts/VaccineERC721.json">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="76" column="9" lean-forward="true" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
+            <state relative-caret-position="68">
+              <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="93" column="13" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
+            <state relative-caret-position="552">
+              <caret line="97" selection-start-line="97" selection-end-line="97" />
             </state>
           </provider>
         </entry>
@@ -61,8 +43,8 @@
       <file leaf-file-name="TableContainer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/Table/TableContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="130" column="67" selection-start-line="130" selection-start-column="67" selection-end-line="130" selection-end-column="67" />
+            <state relative-caret-position="272">
+              <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -70,11 +52,32 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="wrappers.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/core/utils/wrappers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#52#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="types.d.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/web3/types.d.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1194">
+              <caret line="415" column="2" selection-start-line="415" selection-start-column="2" selection-end-line="415" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="VaccineFormContainer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/VaccineForm/VaccineFormContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="88" column="63" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="63" />
+            <state relative-caret-position="323">
+              <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -90,8 +93,8 @@
       <file leaf-file-name="vaccineList.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assets/mock_data/vaccineList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="14" />
+            <state relative-caret-position="51">
+              <caret line="3" column="39" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -161,7 +164,6 @@
         <option value="$PROJECT_DIR$/src/core/reducers/reducer-user.js" />
         <option value="$PROJECT_DIR$/src/containers/Login/LoginContainer.js" />
         <option value="$PROJECT_DIR$/src/containers/HomeView/HomeViewContainer.js" />
-        <option value="$PROJECT_DIR$/src/core/utils/wrappers.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/containers/Header/HeaderContainer.js" />
@@ -171,6 +173,7 @@
         <option value="$PROJECT_DIR$/src/containers/VaccineForm/VaccineFormContainer.js" />
         <option value="$PROJECT_DIR$/src/containers/Table/TableContainer.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/core/utils/wrappers.js" />
       </list>
     </option>
   </component>
@@ -203,17 +206,6 @@
             <path>
               <item name="brick-chain" type="b2602c69:ProjectViewProjectNode" />
               <item name="brick-chain" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="brick-chain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brick-chain" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="contracts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="brick-chain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brick-chain" type="462c0819:PsiDirectoryNode" />
               <item name="contracts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -221,11 +213,6 @@
               <item name="brick-chain" type="462c0819:PsiDirectoryNode" />
               <item name="contracts" type="462c0819:PsiDirectoryNode" />
               <item name="zeppelin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="brick-chain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brick-chain" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="brick-chain" type="b2602c69:ProjectViewProjectNode" />
@@ -323,7 +310,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="packa&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/package.json&#10;form&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/containers/VaccineForm/VaccineFormContainer.js&#10;Vaccin&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/contracts/VaccineERC721.sol&#10;truffle&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/truffle.js&#10;package&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/package.json&#10;connec&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/core/utils/connectors.js&#10;materia&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/node_modules/material-ui&#10;Butto&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/containers/Header/LoginButton.js&#10;App&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/containers/App/AppContainer.js&#10;package.&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/package.json" />
+    <property name="SearchEverywhereHistoryKey" value="Wrapper&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/core/utils/wrappers.js&#10;packa&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/package.json&#10;form&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/containers/VaccineForm/VaccineFormContainer.js&#10;Vaccin&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/contracts/VaccineERC721.sol&#10;truffle&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/truffle.js&#10;package&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/package.json&#10;connec&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/core/utils/connectors.js&#10;materia&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/node_modules/material-ui&#10;Butto&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/containers/Header/LoginButton.js&#10;App&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/containers/App/AppContainer.js&#10;package.&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/package.json" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true&#10;C:/Users/USER/workspace/brick-chain/build/contracts/Migrations.json" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -429,7 +416,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35462000" />
+    <option name="totallyTimeSpent" value="35492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -447,6 +434,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32905984" />
       <window_info id="Capture Tool" order="2" />
+      <window_info anchor="bottom" id="TypeScript" />
       <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25973153" />
       <window_info anchor="right" id="Database" order="3" />
@@ -457,12 +445,34 @@
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info id="Designer" order="2" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32905984" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32905984" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25973153" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,6 +482,33 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/assets/mock_data/vaccineList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="39" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/VaccineForm/VaccineFormContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Table/TableContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/App/index.js" />
     <entry file="file://$PROJECT_DIR$/src/containers/LeftNavBar/index.js" />
     <entry file="file://$PROJECT_DIR$/migrations/1_initial_migration.js">
@@ -649,16 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/utils/wrappers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/HomeView/HomeViewContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -683,9 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
           <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -710,12 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/migrations/2_migrate_contract.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/Migrations.sol">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/contracts/Migrations.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -730,13 +748,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/mock_data/patientList.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/VaccineForm/VaccineFormContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="88" column="63" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="63" />
+        <state relative-caret-position="323">
+          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -745,15 +760,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/mock_data/vaccineList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="14" />
+        <state relative-caret-position="51">
+          <caret line="3" column="39" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Table/TableContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="130" column="67" selection-start-line="130" selection-start-column="67" selection-end-line="130" selection-end-column="67" />
+        <state relative-caret-position="272">
+          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -769,15 +784,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/contracts/VaccineERC721.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="340">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="93" column="13" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
+        <state relative-caret-position="552">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/utils/wrappers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

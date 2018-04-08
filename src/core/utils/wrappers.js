@@ -26,7 +26,7 @@ export const UserIsNotAuthenticated = UserAuthWrapper({
 export const VisibleOnlyDoctor = UserAuthWrapper({
   authSelector: state => state.user,
   wrapperDisplayName: 'VisibleOnlyDoctor',
-  predicate: user => true, // user.loggedInUser && user.loggedInUser.name === DOCTOR,
+  predicate: user => user.loggedInUser && user.loggedInUser.name === DOCTOR,
   FailureComponent: null
 })
 
@@ -40,7 +40,7 @@ export const VisibleOnlyPatient = UserAuthWrapper({
 export const VisibleOnlyAuth = UserAuthWrapper({
   authSelector: state => state.user,
   wrapperDisplayName: 'VisibleOnlyAuth',
-  predicate: user => true, // user.loggedInUser,
+  predicate: user => user.loggedInUser,
   FailureComponent: null
 })
 
