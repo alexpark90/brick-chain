@@ -9,7 +9,9 @@ import { FormsyText } from 'formsy-material-ui/lib'
 import MenuItem from 'material-ui/MenuItem';
 import { vaccineList } from 'assets/mock_data/vaccineList'
 import { patientList } from 'assets/mock_data/patientList'
-import { web3 } from 'core/utils/connectors'
+// import { web3 } from 'core/utils/connectors'
+import web3 from '../../web3'
+import  TruffleContract  from 'truffle-contract'
 
 const styles = {
   paperStyle: {
@@ -38,12 +40,62 @@ class VaccineFormContainer extends Component {
       canSubmit: false,
       vaccine: '',
       patient: '',
+      contracts: {}
     }
-
+    this.initContract()
 
   }
+  // initWeb3 = () => {
+  //   // Is there an injected web3 instance?
+  //   var web3Provider
+  //   if (typeof web3 !== 'undefined') {
+  //     web3Provider = web3.currentProvider
+  //   } else {
+  //     // If no injected web3 instance is detected, fall back to Ganache
+  //     web3Provider = new Web3.providers.HttpProvider('http://localhost:7545')
+  //   }
+  //   web3 = new Web3(web3Provider)
+
+  //   return this.initContract()
+  // }
+
+  initContract = () => {
+    fetch('VaccineERC721.json')
+    .then((res) => {
+      console.log(res)
+      
+      var VaccineERC721 = TruffleContract(res)
+      VaccineERC721.setProvider(web3.currentProvider)
+      this.setState({VaccineERC721})
+    })
+  }
+
+  vaccinate = () => {
+    var instance
+
+    // web3.eth.getAccounts( (error, accounts) => {
+    //   if (error) {
+    //     console.log(error)
+    //   }
+
+    //   var account = accounts[0]
+
+    //   this.state.VaccineERC721.deployed().then(function (inst) {
+    //     instance = inst
+
+    //     // Execute adopt as a transaction by sending account
+    //     return instance.transferToDoctor(this.state.vaccine.ID, this.state.vaccine.Name, 'today', this.state.vaccine['Valid Until'], {from: account})
+    //   }).then(function (result) {
+    //     console.log(result)
+    //     // return App.markAdopted()
+    //   }).catch(function (err) {
+    //     console.log(err.message)
+    //   })
+    // })
+  }
+
   handleSubmit = () => {
-    web3
+    // this.vaccinate()
     this.setState({ submitted: true })
   }
 
