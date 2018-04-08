@@ -13,12 +13,11 @@ import * as uiActionCreators from 'core/actions/actions-ui';
 class LeftNavBarContainer extends Component {
   constructor(props) {
     super(props);
-    console.log('on leftNavBar', props);
   }
 
   closeNav = () => {
     this.props.actions.ui.closeLeftNav();
-  }
+  };
 
   render() {
     return (
@@ -28,15 +27,13 @@ class LeftNavBarContainer extends Component {
           disableSwipeToOpen={true}
           open={this.props.ui.leftNavOpen}
           onRequestChange={this.closeNav}>
-          <AppBar title={this.props.ui.user.name} />
+          <AppBar title='Drawer' />
           <div id="left-nav-container">
-            {this.props.ui.user.name}
           </div>
         </Drawer>
       </div>
     );
   }
-
 }
 
 function mapStateToProps(state) {
