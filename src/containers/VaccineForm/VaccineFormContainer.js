@@ -73,29 +73,30 @@ class VaccineFormContainer extends Component {
   vaccinate = () => {
     var instance
 
-    // web3.eth.getAccounts( (error, accounts) => {
-    //   if (error) {
-    //     console.log(error)
-    //   }
+    web3.eth.getAccounts( (error, accounts) => {
+      if (error) {
+        console.log(error)
+      }
 
-    //   var account = accounts[0]
+      var account = accounts[0]
 
-    //   this.state.VaccineERC721.deployed().then(function (inst) {
-    //     instance = inst
+      this.state.VaccineERC721.deployed().then(function (inst) {
+        instance = inst
 
-    //     // Execute adopt as a transaction by sending account
-    //     return instance.transferToDoctor(this.state.vaccine.ID, this.state.vaccine.Name, 'today', this.state.vaccine['Valid Until'], {from: account})
-    //   }).then(function (result) {
-    //     console.log(result)
-    //     // return App.markAdopted()
-    //   }).catch(function (err) {
-    //     console.log(err.message)
-    //   })
-    // })
+        // Execute adopt as a transaction by sending account
+        return instance.createAndTransfer(this.state.vaccine.ID, this.state.vaccine.Name, 'today', this.state.vaccine['Valid Until'], accounts[1],
+        {from: account})
+      }).then(function (result) {
+        console.log(result)
+        // return App.markAdopted()
+      }).catch(function (err) {
+        console.log(err.message)
+      })
+    })
   }
 
   handleSubmit = () => {
-    // this.vaccinate()
+    this.vaccinate()
     this.setState({ submitted: true })
   }
 
