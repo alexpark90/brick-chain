@@ -6,6 +6,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import muiTheme from './styles/theme/mui-theme'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import {fade} from 'material-ui/utils/colorManipulator'
+import { VisibleOnlyAuth, HiddenOnlyAuth } from '../../core/utils/wrappers'
 import { HashRouter,
          Route,
          Redirect,
@@ -22,10 +23,10 @@ import './styles/app.scss'
 import * as uiActionCreators from 'core/actions/actions-ui'
 
 /* application containers & components */
-import { HeaderContainer, LeftNavBarContainer, HomeViewContainer } from 'containers'
+import { HeaderContainer, LeftNavBarContainer, HomeViewContainer, LoginContainer } from '../index'
 import { Modal } from 'components'
 
-injectTapEventPlugin()
+injectTapEventPlugin();
 
 const theme = getMuiTheme({
   palette: {
@@ -39,7 +40,16 @@ const theme = getMuiTheme({
   // status: {
   //   danger: 'orange',
   // },
-})
+});
+
+const styles = {
+  background: {
+    backgroundImage: 'url(../../assets/images/background.jpg)',
+    // backgroundColor: '#AED581',
+    width: '100%',
+    height: '900px'
+  }
+};
 
 class AppContainer extends Component {
   constructor (props) {
@@ -47,28 +57,41 @@ class AppContainer extends Component {
   }
 
   render () {
-    const { ui, actions } = this.props
+    const { ui, actions } = this.props;
+
+    const AfterLoginView = VisibleOnlyAuth(() =>
+      <div>
+        <HashRouter>
+          <div>
+            <HeaderContainer />
+            <div className='container'>
+              <Switch>
+                <Route path='/home' component={HomeViewContainer} />
+                <Redirect from='/' to='/home' />
+              </Switch>
+            </div>
+            <LeftNavBarContainer />
+          </div>
+        </HashRouter>
+        <Modal
+          open={ui.showModal}
+          actions={ui.modalActions}
+          uiActions={actions.ui}
+          title={ui.modalTitle} />
+      </div>
+    );
+
+    const BeforeLoginView = HiddenOnlyAuth(() =>
+      <div className='container center'>
+        <LoginContainer />
+      </div>
+    );
 
     return (
       <MuiThemeProvider muiTheme={theme}>
-        <div>
-          <HashRouter>
-            <div>
-              <HeaderContainer />
-              <div className='container'>
-                <Switch>
-                  <Route path='/home' component={HomeViewContainer} />
-                  <Redirect from='/' to='/home' />
-                </Switch>
-              </div>
-              <LeftNavBarContainer />
-            </div>
-          </HashRouter>
-          <Modal
-            open={ui.showModal}
-            actions={ui.modalActions}
-            uiActions={actions.ui}
-            title={ui.modalTitle} />
+        <div style={styles.background}>
+          <AfterLoginView />
+          <BeforeLoginView />
         </div>
       </MuiThemeProvider>
     )

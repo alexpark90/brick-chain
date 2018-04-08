@@ -20,10 +20,10 @@ const styles = {
   }
 };
 
-const LoginButton = ({ onClick }) => {
+const LogoutButton = ({ onClick }) => {
   return(
     <RaisedButton
-      label="Login With UPort"
+      label="Logout"
       secondary={true}
       style={styles.button}
       icon={<FontIcon src={uPortLogo} />}
@@ -32,4 +32,4 @@ const LoginButton = ({ onClick }) => {
   )
 };
 
-export default LoginButton
+export default LogoutButton

@@ -6,7 +6,7 @@ const initialState = {
   showModal    : false,
   modalActions : [],
   modalTitle   : '',
-  user         : { name : ''}
+  selectedTab  : 'createVacTab'
 };
 
 export function uiReducer(state = initialState, action) {
@@ -55,9 +55,9 @@ export function uiReducer(state = initialState, action) {
       modalTitle   : ''
     });
 
-  case constants.LOGIN:
+  case constants.SWITCH_TAB:
     return Object.assign({}, state, 
-      { user : action.user }
+      { selectedTab : action.selectedTab }
     );
 
   default:
