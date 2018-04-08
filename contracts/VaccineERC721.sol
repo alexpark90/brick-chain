@@ -1,31 +1,50 @@
 pragma solidity ^0.4.18;
 
 import 'zeppelin-solidity/contracts/token/ERC721/ERC721Token.sol';
-import 'zeppelin-solidity/contracts/ownership/Ownable.sol';
+//import 'zeppelin-solidity/contracts/ownership/Ownable.sol';
 
-contract VaccineERC721 is ERC721Token, Ownable {
+//contract VaccineERC721 is ERC721Token, Ownable {
+contract VaccineERC721 is ERC721Token {
   string constant public NAME = "VACCINE";
   string constant public SYMBOL = "EVAC";
   //string public NAME;
 
       struct VaccineInfo {
         uint256 vaccineId;
-
         string name;
         string dateTaken;
         string validUntil;
     }
 
-     VaccineInfo  public myVaccineinfo ;
+    struct TransactionInfo{
+    uint256 vaccineId;
+
+    string name;
+    string dateTaken;
+    string validUntil;
+    address doctorId;
+    address patientId;
+
+    }
+
+    // VaccineInfo  public myVaccineinfo ;
+
+  //   TransactionInfo myTransactionInfo;
+
 
   uint256 constant public PRICE = .000 ether;
 
   mapping(uint256 => uint256) tokenToPriceMap;
+  mapping(uint256 => TransactionInfo) transactionInfoMap;
 
   function VaccineERC721() public {
 
   }
 
+
+
+
+/*
   function getVaccineId() public view returns(uint256) {
     return myVaccineinfo.vaccineId;
   }
@@ -39,12 +58,40 @@ contract VaccineERC721 is ERC721Token, Ownable {
   function getValidUntil() public view returns(string) {
     return myVaccineinfo.validUntil;
   }
-
+*/
 
   function getSymbol() public pure returns(string) {
     return SYMBOL;
   }
 
+
+  function createAndTransfer(uint256 _vaccineId, string _name,
+  string _dateTaken, string _validUntil, address _recipientAddress) public payable  {
+    require(msg.value >= PRICE);
+
+    VaccineInfo memory  _myVaccineInfo = VaccineInfo(_vaccineId,_name,_dateTaken,_validUntil);
+    TransactionInfo memory _myTransactionInfo = TransactionInfo(
+    _vaccineId,_name,_dateTaken,_validUntil, msg.sender, _recipientAddress);
+  ///  myVaccineinfo.vaccineId = _vaccineId;
+  ///  myVaccineinfo.name = _name;
+  ///  myVaccineinfo.dateTaken = _dateTaken;
+  ///  myVaccineinfo.validUntil = _validUntil;
+    ///fooStruct myStruct = fooStruct(1,2);
+
+
+    _mint(msg.sender, _vaccineId);
+    Transfer(msg.sender, _recipientAddress, _vaccineId);
+  //  transfer(_recipientAddress, _vaccineId);
+    tokenToPriceMap[_vaccineId] = PRICE;
+    transactionInfoMap[_vaccineId] =_myTransactionInfo;
+
+///    if (msg.value > PRICE) {
+///      uint256 priceExcess = msg.value - PRICE;
+///      msg.sender.transfer(priceExcess);
+///    }
+  }
+
+/*
   function transferToDoctor(uint256 _vaccineId, string _name, string _dateTaken, string _validUntil) public payable  {
     require(msg.value >= PRICE);
     myVaccineinfo.vaccineId = _vaccineId;
@@ -78,7 +125,7 @@ contract VaccineERC721 is ERC721Token, Ownable {
       msg.sender.transfer(priceExcess);
     }
   }
-
+*/
 /*
   function mint(uint256 _vaccineId, string _name, string _dateTaken, string _validUntil) public payable  {
     require(msg.value >= PRICE);
