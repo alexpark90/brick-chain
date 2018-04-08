@@ -6,7 +6,7 @@ import {FontIcon, RaisedButton} from 'material-ui';
 
 const styles = {
   button: {
-    margin: 12
+    margin: 300
   },
   exampleImageInput: {
     cursor: 'pointer',
@@ -22,13 +22,15 @@ const styles = {
 
 const LoginButton = ({ onClick }) => {
   return(
-    <RaisedButton
-      label="Login With UPort"
-      secondary={true}
-      style={styles.button}
-      icon={<FontIcon src={uPortLogo} />}
-      onClick={onClick}
-    />
+    <span>
+      <RaisedButton
+        label="Login With UPort"
+        secondary={true}
+        style={styles.button}
+        icon={<FontIcon src={uPortLogo} />}
+        onClick={onClick}
+      />
+    </span>
   )
 };
 

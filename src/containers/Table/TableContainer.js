@@ -14,7 +14,7 @@ import web3 from '../../web3';
 const styles = {
   propContainer: {
     width: 200,
-    overflow: 'hidden',
+    // overflow: 'hidden',
     margin: '20px auto 0',
   },
   propToggleHeader: {
@@ -95,7 +95,7 @@ class TableContainer extends Component {
       enableSelectAll: false,
       deselectOnClickaway: true,
       showCheckboxes: true,
-      height: '300px',
+      height: '500px',
       id: 1,
       contracts: {}
     };

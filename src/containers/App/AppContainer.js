@@ -46,7 +46,6 @@ const styles = {
   background: {
     position: 'fixed',
     backgroundImage: 'url("https://www.avocoidentity.com/wp-content/uploads/2017/12/blockchain.jpg")',
-    // backgroundColor: '#AED581',
     width: '100%',
     height: '900px',
     zIndex: -10

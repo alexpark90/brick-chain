@@ -42,6 +42,13 @@ class HomeViewContainer extends Component {
 
     return (
       <div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <DoctorView />
         <PatientView />
       </div>
