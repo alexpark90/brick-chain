@@ -21,6 +21,7 @@ app.use(require('morgan')('short'));
 
   app.use(express.static(__dirname + '/'))
   app.use(express.static(__dirname + '/build'))
+  app.use(express.static(__dirname + '/src/assets/images'))
 })()
 
 app.get(/.*/, function root (req, res) {
