@@ -8,7 +8,7 @@ export default keyMirror({
   CLEAR_UI           : null,
   SHOW_MODAL         : null,
   CLOSE_MODAL        : null,
-  LOGIN              : null,
+  SWITCH_TAB         : null,
   USER_LOGGED_IN     : null,
   USER_LOGGED_OUT    : null
 });

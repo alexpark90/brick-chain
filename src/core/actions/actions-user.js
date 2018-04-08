@@ -1,12 +1,17 @@
+import constants from 'core/types';
 import { uport } from '../utils/connectors'
 import { browserHistory } from 'react-router'
 
-export const USER_LOGGED_IN = 'USER_LOGGED_IN'
-
 function userLoggedIn(user) {
   return {
-    type: USER_LOGGED_IN,
+    type: constants.USER_LOGGED_IN,
     payload: user
+  }
+}
+
+export function logoutUser() {
+  return{
+    type: constants.USER_LOGGED_OUT
   }
 }
 
