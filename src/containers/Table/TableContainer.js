@@ -30,7 +30,7 @@ const tableData = [
     vaccineId : '1',
     vaccineName : 'Dummy Vaccine Name',
     name: 'John Smith',
-    date : "07/04/18",
+    address: '0x09b8d82f98c05de2436684e0f5050afea5c831d5',
     dateAdministered: '31/04/12',
     dateVaccine: '01/01/13',
   },
@@ -38,6 +38,7 @@ const tableData = [
     vaccineId : '2',
     vaccineName : 'Dummy Vaccine Name',
     name: 'Randal White',
+    address: '0x09b8d82f98c05de2436684e0f5050afea5c831d5',
     dateAdministered: '31/04/12',
     dateVaccine: '01/01/13',
   },
@@ -45,6 +46,7 @@ const tableData = [
     vaccineId : '3',
     vaccineName : 'Dummy Vaccine Name',
     name: 'Stephanie Sanders',
+    address: '0x09b8d82f98c05de2436684e0f5050afea5c831d5',
     dateAdministered: '31/04/12',
     dateVaccine: '01/01/13',
   },
@@ -52,6 +54,7 @@ const tableData = [
     vaccineId : '4',
     vaccineName : 'Dummy Vaccine Name',
     name: 'Steve Brown',
+    address: '0x09b8d82f98c05de2436684e0f5050afea5c831d5',
     dateAdministered: '31/04/12',
     dateVaccine: '01/01/13',
   },
@@ -59,6 +62,7 @@ const tableData = [
     vaccineId : '5',
     vaccineName : 'Dummy Vaccine Name',
     name: 'Joyce Whitten',
+    address: '0x09b8d82f98c05de2436684e0f5050afea5c831d5',
     dateAdministered: '31/04/12',
     dateVaccine: '01/01/13',
   },
@@ -66,6 +70,7 @@ const tableData = [
     vaccineId : '6',
     vaccineName : 'Dummy Vaccine Name',
     name: 'Samuel Roberts',
+    address: '0x09b8d82f98c05de2436684e0f5050afea5c831d5',
     dateAdministered: '31/04/12',
     dateVaccine: '01/01/13',
   },
@@ -73,6 +78,7 @@ const tableData = [
     vaccineId : '7',
     vaccineName : 'Dummy Vaccine Name',
     name: 'Adam Moore',
+    address: '0x09b8d82f98c05de2436684e0f5050afea5c831d5',
     dateAdministered: '31/04/12',
     dateVaccine: '01/01/13',
   },
@@ -142,9 +148,10 @@ search = (event) => {
                 <TableHeaderColumn tooltip="The vaccineID">Vaccine ID</TableHeaderColumn>
                 <TableHeaderColumn tooltip="The vaccineName">Vaccine Name</TableHeaderColumn>
                 <TableHeaderColumn tooltip="The Name">Name</TableHeaderColumn>
+                <TableHeaderColumn tooltip="The Patient Address">Patient Address</TableHeaderColumn>
                 <TableHeaderColumn tooltip="The Vaccine Administration">Vaccine Administration</TableHeaderColumn>
                 <TableHeaderColumn tooltip="The Vaccine Expiration">Vaccine Expiration</TableHeaderColumn>
-              </TableRow>
+             </TableRow>
             </TableHeader>
             <TableBody
               displayRowCheckbox={this.state.showCheckboxes}
@@ -158,6 +165,7 @@ search = (event) => {
                   <TableRowColumn>{row.vaccineId}</TableRowColumn>
                   <TableRowColumn>{row.vaccineName}</TableRowColumn>
                   <TableRowColumn>{row.name}</TableRowColumn>
+                  <TableRowColumn>{row.address}</TableRowColumn>
                   <TableRowColumn>{row.dateAdministered}</TableRowColumn>
                   <TableRowColumn>{row.dateVaccine}</TableRowColumn>
                 </TableRow>
