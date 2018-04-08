@@ -43,7 +43,7 @@ class VaccineFormContainer extends Component {
       contracts: {}
     }
     this.initContract()
-
+    
   }
   // initWeb3 = () => {
   //   // Is there an injected web3 instance?
@@ -60,31 +60,44 @@ class VaccineFormContainer extends Component {
   // }
 
   initContract = () => {
-    fetch('VaccineERC721.json')
+    fetch('/contracts/VaccineERC721.json')
+    .then((res) => {
+      return res.json()})
     .then((res) => {
       console.log(res)
       
       var VaccineERC721 = TruffleContract(res)
       VaccineERC721.setProvider(web3.currentProvider)
+      // console.log(VaccineERC721)
+
       this.setState({VaccineERC721})
-    })
+    }) 
+    
   }
 
   vaccinate = () => {
     var instance
+
 
     web3.eth.getAccounts( (error, accounts) => {
       if (error) {
         console.log(error)
       }
 
+      console.log('acc' + accounts)
+
+      web3.eth.getCoinbase().then(coinbase => {
+        console.log(coinbase)
+        
+      })
+
       var account = accounts[0]
 
-      this.state.VaccineERC721.deployed().then(function (inst) {
+      this.state.VaccineERC721.deployed().then( (inst) => {
         instance = inst
-
+        const add = '0x22Ae22e66aF59f6e6c848477813Fe530f61007aC'
         // Execute adopt as a transaction by sending account
-        return instance.createAndTransfer(this.state.vaccine.ID, this.state.vaccine.Name, 'today', this.state.vaccine['Valid Until'], accounts[1],
+        return instance.createAndTransfer(1, this.state.vaccine.Name, 'today', this.state.vaccine['Valid Until'], add,
         {from: account})
       }).then(function (result) {
         console.log(result)
