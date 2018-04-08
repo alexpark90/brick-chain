@@ -28,7 +28,7 @@ class HeaderContainer extends Component {
       <div className={styles}>
         <header>
           <MuiAppBar
-            title={this.loggedInUser ? this.loggedInUser.name + ' ' + this.loggedInUser.address : ''}
+            title={this.loggedInUser ? this.loggedInUser.name + ' ' + this.loggedInUser.publicKey : ''}
             onLeftIconButtonTouchTap={this.handleToggle}
             iconElementRight={<LoginContainer />}
             iconElementLeft={<svg id="circle" height="60" width="200">

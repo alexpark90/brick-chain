@@ -6,23 +6,21 @@ import {FontIcon, RaisedButton} from 'material-ui';
 
 const styles = {
   button: {
-    margin: 300
+    margin: 300,
+    marginTop: 10
   },
-  exampleImageInput: {
-    cursor: 'pointer',
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    right: 0,
-    left: 0,
-    width: '100%',
-    opacity: 0
+  wrapper: {
+    paddingTop: 300
   }
 };
 
 const LoginButton = ({ onClick }) => {
   return(
-    <span>
+    <div style={styles.wrapper}>
+      <svg id="circle" height="60" width="200">
+        <image x="0" y="0" height="60" width="200"  xlinkHref="uport-logo.svg" />
+      </svg>
+      <br />
       <RaisedButton
         label="Login With UPort"
         secondary={true}
@@ -30,7 +28,7 @@ const LoginButton = ({ onClick }) => {
         icon={<FontIcon src={uPortLogo} />}
         onClick={onClick}
       />
-    </span>
+    </div>
   )
 };
 

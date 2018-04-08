@@ -25,6 +25,7 @@ import * as uiActionCreators from 'core/actions/actions-ui'
 /* application containers & components */
 import { HeaderContainer, LeftNavBarContainer, HomeViewContainer, LoginContainer } from '../index'
 import { Modal } from 'components'
+import {Avatar, SvgIcon} from 'material-ui';
 
 injectTapEventPlugin()
 

@@ -25,8 +25,8 @@ export const patientList = [
   },
   {
     'ID': '5091914',
-    'Last Name': 'Lee',
-    'First Name': 'Claude',
+    'Last Name': 'Park',
+    'First Name': 'Alex',
     'Gender': 'Female',
     'Date of Birth': 'January 19, 1966',
     'Address': '134 Budea Crescent, Scarborough, ON M1R 4W1'

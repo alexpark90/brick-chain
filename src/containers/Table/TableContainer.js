@@ -25,60 +25,60 @@ const styles = {
 const tableData = [
   {
     vaccineId : '1',
-    vaccineName : 'Dummy Vaccine Name',
-    name: 'John Smith',
-    address: '0x09b8d82f98c05de2436684e0f5050afea5c831d5',
-    dateAdministered: '31/04/12',
-    dateVaccine: '01/01/13',
+    vaccineName : 'Hepatitis \'A\' Adult',
+    name: 'Alex Park',
+    address: '0x04bf99f5f9d5c23711b5b4ee179ff1bd48491ec',
+    dateAdministered: '08/04/18',
+    dateVaccine: '01/11/20',
   },
   {
     vaccineId : '2',
-    vaccineName : 'Dummy Vaccine Name',
-    name: 'Randal White',
-    address: '0x09b8d82f98c05de2436684e0f5050afea5c831d5',
-    dateAdministered: '31/04/12',
-    dateVaccine: '01/01/13',
+    vaccineName : 'Yellow Fever',
+    name: 'Alex Park',
+    address: '0x04bf99f5f9d5c23711b5b4ee179ff1bd48491ec',
+    dateAdministered: '08/04/18',
+    dateVaccine: '01/11/20',
   },
   {
     vaccineId : '3',
-    vaccineName : 'Dummy Vaccine Name',
-    name: 'Stephanie Sanders',
-    address: '0x09b8d82f98c05de2436684e0f5050afea5c831d5',
-    dateAdministered: '31/04/12',
-    dateVaccine: '01/01/13',
+    vaccineName : 'Influenza Vaccine 2017',
+    name: 'Alex Park',
+    address: '0x04bf99f5f9d5c23711b5b4ee179ff1bd48491ec',
+    dateAdministered: '08/04/18',
+    dateVaccine: '01/11/20',
   },
-  {
-    vaccineId : '4',
-    vaccineName : 'Dummy Vaccine Name',
-    name: 'Steve Brown',
-    address: '0x09b8d82f98c05de2436684e0f5050afea5c831d5',
-    dateAdministered: '31/04/12',
-    dateVaccine: '01/01/13',
-  },
-  {
-    vaccineId : '5',
-    vaccineName : 'Dummy Vaccine Name',
-    name: 'Joyce Whitten',
-    address: '0x09b8d82f98c05de2436684e0f5050afea5c831d5',
-    dateAdministered: '31/04/12',
-    dateVaccine: '01/01/13',
-  },
-  {
-    vaccineId : '6',
-    vaccineName : 'Dummy Vaccine Name',
-    name: 'Samuel Roberts',
-    address: '0x09b8d82f98c05de2436684e0f5050afea5c831d5',
-    dateAdministered: '31/04/12',
-    dateVaccine: '01/01/13',
-  },
-  {
-    vaccineId : '7',
-    vaccineName : 'Dummy Vaccine Name',
-    name: 'Adam Moore',
-    address: '0x09b8d82f98c05de2436684e0f5050afea5c831d5',
-    dateAdministered: '31/04/12',
-    dateVaccine: '01/01/13',
-  },
+  // {
+  //   vaccineId : '4',
+  //   vaccineName : 'Dummy Vaccine Name',
+  //   name: 'Steve Brown',
+  //   address: '0x09b8d82f98c05de2436684e0f5050afea5c831d5',
+  //   dateAdministered: '31/04/12',
+  //   dateVaccine: '01/01/13',
+  // },
+  // {
+  //   vaccineId : '5',
+  //   vaccineName : 'Dummy Vaccine Name',
+  //   name: 'Joyce Whitten',
+  //   address: '0x09b8d82f98c05de2436684e0f5050afea5c831d5',
+  //   dateAdministered: '31/04/12',
+  //   dateVaccine: '01/01/13',
+  // },
+  // {
+  //   vaccineId : '6',
+  //   vaccineName : 'Dummy Vaccine Name',
+  //   name: 'Samuel Roberts',
+  //   address: '0x09b8d82f98c05de2436684e0f5050afea5c831d5',
+  //   dateAdministered: '31/04/12',
+  //   dateVaccine: '01/01/13',
+  // },
+  // {
+  //   vaccineId : '7',
+  //   vaccineName : 'Dummy Vaccine Name',
+  //   name: 'Adam Moore',
+  //   address: '0x09b8d82f98c05de2436684e0f5050afea5c831d5',
+  //   dateAdministered: '31/04/12',
+  //   dateVaccine: '01/01/13',
+  // },
 ];
 
 class TableContainer extends Component {
@@ -176,13 +176,12 @@ class TableContainer extends Component {
                 </TableHeaderColumn>
               </TableRow>
               <TableRow>
-                <TableHeaderColumn tooltip="The ID">ID</TableHeaderColumn>
-                <TableHeaderColumn tooltip="The vaccineID">Vaccine ID</TableHeaderColumn>
-                <TableHeaderColumn tooltip="The vaccineName">Vaccine Name</TableHeaderColumn>
-                <TableHeaderColumn tooltip="The Name">Name</TableHeaderColumn>
-                <TableHeaderColumn tooltip="The Patient Address">Patient Address</TableHeaderColumn>
-                <TableHeaderColumn tooltip="The Vaccine Administration">Vaccine Administration</TableHeaderColumn>
-                <TableHeaderColumn tooltip="The Vaccine Expiration">Vaccine Expiration</TableHeaderColumn>
+                <TableHeaderColumn colSpan="1" tooltip="The vaccineID">Vaccine ID</TableHeaderColumn>
+                <TableHeaderColumn colSpan="4" tooltip="The vaccineName">Vaccine Name</TableHeaderColumn>
+                <TableHeaderColumn colSpan="4" tooltip="The Name">Name</TableHeaderColumn>
+                <TableHeaderColumn colSpan="6" tooltip="The Patient Address">Patient Address</TableHeaderColumn>
+                <TableHeaderColumn colSpan="2" tooltip="The Vaccine Administration">Date</TableHeaderColumn>
+                <TableHeaderColumn colSpan="2" tooltip="The Vaccine Expiration">Expiration</TableHeaderColumn>
              </TableRow>
             </TableHeader>
             <TableBody
@@ -193,13 +192,12 @@ class TableContainer extends Component {
             >
               {tableData.map( (row, index) => (
                 <TableRow key={index}>
-                  <TableRowColumn>{index}</TableRowColumn>
-                  <TableRowColumn>{row.vaccineId}</TableRowColumn>
-                  <TableRowColumn>{row.vaccineName}</TableRowColumn>
-                  <TableRowColumn>{row.name}</TableRowColumn>
-                  <TableRowColumn>{row.address}</TableRowColumn>
-                  <TableRowColumn>{row.dateAdministered}</TableRowColumn>
-                  <TableRowColumn>{row.dateVaccine}</TableRowColumn>
+                  <TableRowColumn colSpan="1">{row.vaccineId}</TableRowColumn>
+                  <TableRowColumn colSpan="4">{row.vaccineName}</TableRowColumn>
+                  <TableRowColumn colSpan="4">{row.name}</TableRowColumn>
+                  <TableRowColumn colSpan="6">{row.address}</TableRowColumn>
+                  <TableRowColumn colSpan="2">{row.dateAdministered}</TableRowColumn>
+                  <TableRowColumn colSpan="2">{row.dateVaccine}</TableRowColumn>
                 </TableRow>
                 ))}
             </TableBody>
