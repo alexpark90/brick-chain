@@ -86,18 +86,13 @@ class VaccineFormContainer extends Component {
 
       console.log('acc' + accounts)
 
-      web3.eth.getCoinbase().then(coinbase => {
-        console.log(coinbase)
-        
-      })
-
       var account = accounts[0]
-
+      
       this.state.VaccineERC721.deployed().then( (inst) => {
         instance = inst
-        const add = '0x22Ae22e66aF59f6e6c848477813Fe530f61007aC'
+        const add = '0xC55C2E5Ac25D4E74Ba94443E953cD87d5F6Cc324'
         // Execute adopt as a transaction by sending account
-        return instance.createAndTransfer(1, this.state.vaccine.Name, 'today', this.state.vaccine['Valid Until'], add,
+        return instance.createAndTransfer(parseInt(this.state.vaccine.ID), this.state.vaccine.Name, 'today', this.state.vaccine['Valid Until'], add,
         {from: account})
       }).then(function (result) {
         console.log(result)
