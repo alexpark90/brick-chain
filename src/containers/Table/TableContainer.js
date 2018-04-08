@@ -1,18 +1,15 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import {
  Table,
  TableBody,
- TableFooter,
  TableHeader,
  TableHeaderColumn,
  TableRow,
  TableRowColumn,
 } from 'material-ui/Table'
 import TextField from 'material-ui/TextField'
-import Toggle from 'material-ui/Toggle'
-
-const id = "1";
+import TruffleContract from 'truffle-contract';
+import web3 from '../../web3';
 
 const styles = {
   propContainer: {
@@ -85,39 +82,74 @@ const tableData = [
 ];
 
 class TableContainer extends Component {
-  state = {
-  fixedHeader: true,
-  fixedFooter: true,
-  stripedRows: false,
-  showRowHover: false,
-  selectable: true,
-  multiSelectable: false,
-  enableSelectAll: false,
-  deselectOnClickaway: true,
-  showCheckboxes: true,
-  height: '300px',
-  id : 1,
-};
 
-handleToggle = (event, toggled) => {
-  this.setState({
-    [event.target.name]: toggled,
-  });
-};
-
-handleChange = (event) => {
-  this.setState({height: event.target.value});
-};
-
-search = (event) => {
-  this.setState({id: event.target.value});
-};
+  constructor (props) {
+    super(props)
+    this.state = {
+      fixedHeader: true,
+      fixedFooter: true,
+      stripedRows: false,
+      showRowHover: false,
+      selectable: true,
+      multiSelectable: false,
+      enableSelectAll: false,
+      deselectOnClickaway: true,
+      showCheckboxes: true,
+      height: '300px',
+      id: 1,
+      contracts: {}
+    };
+    this.initContract();
+  }
 
 
+  initContract = () => {
+    fetch('/contracts/VaccineERC721.json')
+      .then((res) => {
+        return res.json()})
+      .then((res) => {
+        console.log(res)
 
-  // static propTypes = {
-  //    : PropTypes.func
-  // }
+        var VaccineERC721 = TruffleContract(res)
+        VaccineERC721.setProvider(web3.currentProvider)
+        // console.log(VaccineERC721)
+
+        var instance;
+
+        web3.eth.getAccounts( (error, accounts) => {
+          if (error) {
+            console.log(error)
+          }
+
+          console.log('acc' + accounts)
+
+          var account = accounts[0];
+
+          VaccineERC721.deployed().then((inst) => {
+            instance = inst;
+
+            console.log('instance :', instance.transactionInfoMap[0]);
+
+          });
+        })
+
+      })
+  };
+//
+// handleToggle = (event, toggled) => {
+//   this.setState({
+//     [event.target.name]: toggled,
+//   });
+// };
+//
+// handleChange = (event) => {
+//   this.setState({height: event.target.value});
+// };
+//
+// search = (event) => {
+//   this.setState({id: event.target.value});
+// };
+
   render () {
     return (
       <div>
