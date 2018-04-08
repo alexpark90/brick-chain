@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="460de04e-e235-42f8-acda-dff5652ccf45" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/App/AppContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App/AppContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/HomeView/HomeViewContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HomeView/HomeViewContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Login/LoginButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Login/LoginButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Table/TableContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Table/TableContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,16 +38,16 @@
         <entry file="file://$PROJECT_DIR$/contracts/VaccineERC721.sol">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
+            <state relative-caret-position="323">
+              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -60,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/src/containers/Header/HeaderContainer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="578">
-              <caret line="34" column="62" lean-forward="true" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="67" />
+              <caret line="34" column="62" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="67" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
                 <element signature="e#410#449#0" expanded="true" />
@@ -78,7 +74,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TableContainer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TableContainer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/Table/TableContainer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -106,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/src/core/utils/wrappers.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+              <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -182,13 +178,13 @@
         <option value="$PROJECT_DIR$/src/containers/VacHistory/VacHistoryContainer.js" />
         <option value="$PROJECT_DIR$/truffle.js" />
         <option value="$PROJECT_DIR$/src/containers/VaccineForm/VaccineFormContainer.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/core/utils/wrappers.js" />
         <option value="$PROJECT_DIR$/src/containers/App/AppContainer.js" />
         <option value="$PROJECT_DIR$/src/containers/Header/HeaderContainer.js" />
         <option value="$PROJECT_DIR$/src/containers/HomeView/HomeViewContainer.js" />
         <option value="$PROJECT_DIR$/src/containers/Login/LoginButton.js" />
         <option value="$PROJECT_DIR$/src/containers/Table/TableContainer.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -332,7 +328,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="AppCo&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/containers/App/AppContainer.js&#10;Wrapper&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/core/utils/wrappers.js&#10;packa&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/package.json&#10;form&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/containers/VaccineForm/VaccineFormContainer.js&#10;Vaccin&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/contracts/VaccineERC721.sol&#10;truffle&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/truffle.js&#10;package&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/package.json&#10;connec&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/core/utils/connectors.js&#10;materia&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/node_modules/material-ui&#10;Butto&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/containers/Header/LoginButton.js&#10;App&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/containers/App/AppContainer.js&#10;package.&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/package.json" />
+    <property name="SearchEverywhereHistoryKey" value="packa&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/package.json&#10;AppCo&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/containers/App/AppContainer.js&#10;Wrapper&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/core/utils/wrappers.js&#10;form&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/containers/VaccineForm/VaccineFormContainer.js&#10;Vaccin&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/contracts/VaccineERC721.sol&#10;truffle&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/truffle.js&#10;package&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/package.json&#10;connec&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/core/utils/connectors.js&#10;materia&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/node_modules/material-ui&#10;Butto&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/containers/Header/LoginButton.js&#10;App&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/src/containers/App/AppContainer.js&#10;package.&#9;FILE&#9;file://C:/Users/USER/workspace/brick-chain/package.json" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true&#10;C:/Users/USER/workspace/brick-chain/build/contracts/Migrations.json" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -438,7 +434,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36614000" />
+    <option name="totallyTimeSpent" value="37230000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -728,21 +724,14 @@
     <entry file="file://$PROJECT_DIR$/contracts/VaccineERC721.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/utils/wrappers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+          <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
           </folding>
@@ -796,7 +785,7 @@
     <entry file="file://$PROJECT_DIR$/src/containers/Header/HeaderContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
-          <caret line="34" column="62" lean-forward="true" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="67" />
+          <caret line="34" column="62" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="67" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
             <element signature="e#410#449#0" expanded="true" />
@@ -825,6 +814,13 @@
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
         </state>
       </provider>
     </entry>

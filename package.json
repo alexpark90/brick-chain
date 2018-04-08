@@ -7,7 +7,7 @@
     "build": "webpack --progress --verbose --colors --display-error-details --config config/webpack/common.config.js",
     "build:production": "npm run clean && npm run build",
     "lint": "eslint src --fix",
-    "start": "cross-env NODE_ENV=rinkeby node bin/server.js",
+    "start": "cross-env NODE_ENV=development node bin/server.js",
     "test": "jest --verbose"
   },
   "repository": {
