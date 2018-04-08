@@ -31,6 +31,9 @@ class HeaderContainer extends Component {
             title={this.loggedInUser ? this.loggedInUser.name + ' ' + this.loggedInUser.address : ''}
             onLeftIconButtonTouchTap={this.handleToggle}
             iconElementRight={<LoginContainer />}
+            iconElementLeft={<svg id="circle" height="60" width="60">
+              <image x="0" y="0" height="60" width="60"  xlinkHref="assets/images/eVaccine_color.svg" />
+            </svg>}
           />
         </header>
       </div>
