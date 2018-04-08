@@ -13,21 +13,16 @@ import {Tab, Tabs} from 'material-ui/Tabs/index';
 class HomeViewContainer extends Component {
   constructor (props) {
     super(props);
-    this.state = {
-      value: 'createVacTab'
-    };
   }
 
   handleChange = (value) => {
-    this.setState({
-      value: value
-    });
+    this.props.actions.ui.switchTab(value);
   };
 
   render () {
     return (
       <Tabs
-        value={this.state.value}
+        value={this.props.ui.selectedTab}
         onChange={this.handleChange} >
         <Tab label="Create Vaccine Record" value="createVacTab">
           <VaccineFormContainer />
@@ -40,6 +35,12 @@ class HomeViewContainer extends Component {
   }
 }
 
+function mapStateToProps (state) {
+  return {
+    ui: state.ui
+  }
+}
+
 function mapDispatchToProps (dispatch) {
   return {
     actions: {
@@ -49,5 +50,5 @@ function mapDispatchToProps (dispatch) {
 }
 
 export default withRouter(
-  connect(null, mapDispatchToProps)(HomeViewContainer)
+  connect(mapStateToProps, mapDispatchToProps)(HomeViewContainer)
 )
