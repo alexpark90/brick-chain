@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import SelectField from 'material-ui/SelectField'
 import RaisedButton from 'material-ui/RaisedButton'
 import DatePicker from 'material-ui/DatePicker';
@@ -9,7 +8,6 @@ import { FormsyText } from 'formsy-material-ui/lib'
 import MenuItem from 'material-ui/MenuItem';
 import { vaccineList } from 'assets/mock_data/vaccineList'
 import { patientList } from 'assets/mock_data/patientList'
-// import { web3 } from 'core/utils/connectors'
 import web3 from '../../web3'
 import  TruffleContract  from 'truffle-contract'
 
@@ -84,8 +82,6 @@ class VaccineFormContainer extends Component {
         console.log(error)
       }
 
-      console.log('acc' + accounts)
-
       var account = accounts[0]
       
       this.state.VaccineERC721.deployed().then( (inst) => {
@@ -118,12 +114,10 @@ class VaccineFormContainer extends Component {
 
   handleVaccineChange = (event, index, value) => {
     this.setState({ vaccine: value });
-    console.log(`Selected Vaccine: ${value}`);
   }
 
   handlePatientChange = (event, index, value) => {
     this.setState({ patient: value });
-    console.log(`Selected Patient: ${value}`);
   }
   
   notifyFormError (data) {

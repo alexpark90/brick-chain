@@ -91,7 +91,7 @@
     "truffle-hdwallet-provider": "0.0.3",
     "update-json-file": "^1.1.1",
     "uport-connect": "^0.7.0",
-    "web3": "^1.0.0-beta.33",
+    "web3": "1.0.0-beta.33",
     "zeppelin-solidity": "^1.8.0"
   }
 }
