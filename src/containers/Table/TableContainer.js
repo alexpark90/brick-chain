@@ -12,6 +12,8 @@ import {
 import TextField from 'material-ui/TextField'
 import Toggle from 'material-ui/Toggle'
 
+const id = "1";
+
 const styles = {
   propContainer: {
     width: 200,
@@ -88,6 +90,7 @@ class TableContainer extends Component {
   deselectOnClickaway: true,
   showCheckboxes: true,
   height: '300px',
+  id : 1,
 };
 
 handleToggle = (event, toggled) => {
@@ -99,6 +102,13 @@ handleToggle = (event, toggled) => {
 handleChange = (event) => {
   this.setState({height: event.target.value});
 };
+
+search = (event) => {
+  this.setState({id: event.target.value});
+};
+
+
+
   // static propTypes = {
   //    : PropTypes.func
   // }
@@ -118,8 +128,13 @@ handleChange = (event) => {
               enableSelectAll={this.state.enableSelectAll}
             >
               <TableRow>
-                <TableHeaderColumn colSpan="3" tooltip="Super Header" style={{textAlign: 'center'}}>
-                  Vaccines
+                <TableHeaderColumn colSpan="5" tooltip="Super Header" style={{textAlign: 'center'}}>
+                  <div style={styles.propContainer}>
+                    <TextField
+                      floatingLabelText="Search ID"
+                      onChange={this.state.search}
+                    />
+                </div>
                 </TableHeaderColumn>
               </TableRow>
               <TableRow>
