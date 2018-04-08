@@ -26,7 +26,7 @@ class HeaderContainer extends Component {
       <div className={styles}>
         <header>
           <MuiAppBar
-            title={this.props.user.loggedInUser.name}
+            title={this.props.user.loggedInUser ? this.props.user.loggedInUser.name : ''}
             onLeftIconButtonTouchTap={this.handleToggle}
             iconElementRight={<LoginContainer />}
           />

@@ -65,9 +65,9 @@ export function closeModal() {
   };
 }
 
-export function login() {
+export function switchTab(value) {
   return {
-    type: constants.LOGIN,
-    user: {name : 'Alex'}
+    type: constants.SWITCH_TAB,
+    selectedTab : value
   }
 }
