@@ -1,6 +1,8 @@
 import { UserAuthWrapper } from 'redux-auth-wrapper'
 import { routerActions } from 'react-router-redux'
 
+const DOCTOR = 'Doctor';
+
 // Layout Component Wrappers
 
 export const UserIsAuthenticated = UserAuthWrapper({
@@ -20,6 +22,20 @@ export const UserIsNotAuthenticated = UserAuthWrapper({
 });
 
 // UI Component Wrappers
+
+export const VisibleOnlyDoctor = UserAuthWrapper({
+  authSelector: state => state.user,
+  wrapperDisplayName: 'VisibleOnlyDoctor',
+  predicate: user => user.loggedInUser && user.loggedInUser.name === DOCTOR,
+  FailureComponent: null
+});
+
+export const VisibleOnlyPatient = UserAuthWrapper({
+  authSelector: state => state.user,
+  wrapperDisplayName: 'VisibleOnlyPatient',
+  predicate: user => user.loggedInUser && user.loggedInUser.name != DOCTOR,
+  FailureComponent: null
+});
 
 export const VisibleOnlyAuth = UserAuthWrapper({
   authSelector: state => state.user,

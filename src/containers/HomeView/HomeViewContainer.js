@@ -9,6 +9,7 @@ import { styles } from './styles.scss'
 /* actions */
 import * as uiActionCreators from 'core/actions/actions-ui'
 import {Tab, Tabs} from 'material-ui/Tabs/index';
+import {VisibleOnlyDoctor, VisibleOnlyPatient} from '../../core/utils/wrappers';
 
 class HomeViewContainer extends Component {
   constructor (props) {
@@ -20,7 +21,7 @@ class HomeViewContainer extends Component {
   };
 
   render () {
-    return (
+    const DoctorView = VisibleOnlyDoctor(() =>
       <Tabs
         value={this.props.ui.selectedTab}
         onChange={this.handleChange} >
@@ -31,6 +32,19 @@ class HomeViewContainer extends Component {
           <VacHistoryContainer />
         </Tab>
       </Tabs>
+    );
+
+    const PatientView = VisibleOnlyPatient(() =>
+      <div>
+        <VacHistoryContainer />
+      </div>
+    );
+
+    return (
+      <div>
+        <DoctorView />
+        <PatientView />
+      </div>
     )
   }
 }

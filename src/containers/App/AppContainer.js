@@ -45,7 +45,7 @@ const theme = getMuiTheme({
 const styles = {
   background: {
     backgroundImage: 'url(../../assets/images/background.jpg)',
-    backgroundColor: '#AED581',
+    // backgroundColor: '#AED581',
     width: '100%',
     height: '900px'
   }
