@@ -7,7 +7,7 @@
     "build": "webpack --progress --verbose --colors --display-error-details --config config/webpack/common.config.js",
     "build:production": "npm run clean && npm run build",
     "lint": "eslint src --fix",
-    "start": "cross-env NODE_ENV=development node bin/server.js",
+    "start": "cross-env NODE_ENV=rinkeby node bin/server.js",
     "test": "jest --verbose"
   },
   "repository": {
@@ -87,7 +87,9 @@
     "redux": "^3.1.4",
     "redux-auth-wrapper": "^1.0.0",
     "redux-thunk": "^2.0.1",
+    "truffle-hdwallet-provider": "0.0.3",
     "uport-connect": "^0.7.0",
-    "web3": "^1.0.0-beta2"
+    "web3": "^1.0.0-beta2",
+    "zeppelin-solidity": "^1.8.0"
   }
 }

@@ -17,6 +17,8 @@ class HeaderContainer extends Component {
     super(props);
   }
 
+  loggedInUser = this.props.user.loggedInUser;
+
   handleToggle =() => {
     this.props.actions.ui.openLeftNav();
   };
@@ -26,7 +28,7 @@ class HeaderContainer extends Component {
       <div className={styles}>
         <header>
           <MuiAppBar
-            title={this.props.user.loggedInUser ? this.props.user.loggedInUser.name : ''}
+            title={this.loggedInUser ? this.loggedInUser.name + ' ' + this.loggedInUser.address : ''}
             onLeftIconButtonTouchTap={this.handleToggle}
             iconElementRight={<LoginContainer />}
           />
