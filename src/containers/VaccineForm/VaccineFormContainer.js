@@ -138,7 +138,7 @@ class VaccineFormContainer extends Component {
     
 
     return (
-      <div>
+      <div style={{marginTop: '40px'}}>
         <Paper style={paperStyle}>
           <Formsy.Form
             onValid={this.enableButton}
