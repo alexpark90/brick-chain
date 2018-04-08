@@ -1,7 +1,7 @@
 import constants from 'core/types';
 
 const initialState = {
-  loggedInUser: {}
+  loggedInUser: null
 };
 
 export function userReducer (state = initialState, action) {
