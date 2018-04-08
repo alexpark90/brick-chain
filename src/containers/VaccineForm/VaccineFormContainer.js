@@ -139,7 +139,6 @@ class VaccineFormContainer extends Component {
 
     return (
       <div>
-        {this.state.submitted ? <div>Submitted!</div> : null}
         <Paper style={paperStyle}>
           <Formsy.Form
             onValid={this.enableButton}

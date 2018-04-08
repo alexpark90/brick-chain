@@ -39,7 +39,6 @@
   }
 
   .container {
-    padding:100px 20px 0 20px;
     margin: 0 auto;
     max-width: 1200px;
   }
@@ -63,13 +62,13 @@
 
   @media (max-width: 1300px) {
     .container {
-      padding-top: 120px;
+      padding-top: 72px;
     }
   }
 
   @media (max-width: 840px) {
     .container {
-      padding-top: 140px;
+      padding-top: 72px;
     }
   }
 
