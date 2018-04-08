@@ -12,7 +12,7 @@ import { HashRouter,
          Redirect,
          Switch } from 'react-router-dom'
 import {
-  green700, orange700, green900, orange900
+  green700, orange700, teal700, cyan800, orange900
 } from 'material-ui/styles/colors'
 /*
  * Import global styles into entire app
@@ -26,30 +26,32 @@ import * as uiActionCreators from 'core/actions/actions-ui'
 import { HeaderContainer, LeftNavBarContainer, HomeViewContainer, LoginContainer } from '../index'
 import { Modal } from 'components'
 
-injectTapEventPlugin();
+injectTapEventPlugin()
 
 const theme = getMuiTheme({
   palette: {
-    primary1Color: green700,
-    primary2Color: green900,
+    primary1Color: fade(cyan800, 0.7),
+    primary2Color: fade(cyan800, 0.8),
     accent1Color: orange700,
     accent2Color: orange900,
-    pickerHeaderColor: green700,
-    clockCircleColor: fade(green700, 0.07)
+    pickerHeaderColor: cyan800,
+    clockCircleColor: green700
   }
   // status: {
   //   danger: 'orange',
   // },
-});
+})
 
 const styles = {
   background: {
-    backgroundImage: 'url(../../assets/images/background.jpg)',
+    position: 'fixed',
+    backgroundImage: 'url("https://www.avocoidentity.com/wp-content/uploads/2017/12/blockchain.jpg")',
     // backgroundColor: '#AED581',
     width: '100%',
-    height: '900px'
+    height: '900px',
+    zIndex: -10
   }
-};
+}
 
 class AppContainer extends Component {
   constructor (props) {
@@ -57,7 +59,7 @@ class AppContainer extends Component {
   }
 
   render () {
-    const { ui, actions } = this.props;
+    const { ui, actions } = this.props
 
     const AfterLoginView = VisibleOnlyAuth(() =>
       <div>
@@ -79,19 +81,22 @@ class AppContainer extends Component {
           uiActions={actions.ui}
           title={ui.modalTitle} />
       </div>
-    );
+    )
 
     const BeforeLoginView = HiddenOnlyAuth(() =>
       <div className='container center'>
         <LoginContainer />
       </div>
-    );
+    )
 
     return (
       <MuiThemeProvider muiTheme={theme}>
-        <div style={styles.background}>
-          <AfterLoginView />
-          <BeforeLoginView />
+        <div>
+          <div style={styles.background} />
+          <div style={{opacity: 1}}>
+            <AfterLoginView />
+            <BeforeLoginView />
+          </div>
         </div>
       </MuiThemeProvider>
     )
